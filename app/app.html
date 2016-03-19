@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Streamer</title>
+    <script>
+      (function() {
+        if (!process.env.HOT) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = '../dist/style.css';
+          document.write(link.outerHTML);
+        }
+      }());
+    </script>
+  </head>
+  <body>
+
+    <div id="app" v-bind:class="{ 'overflow-hidden': this.$route.name == 'movieDetails' }">
+      <router-view></router-view>
+    </div>
+
+    <script>
+      (function() {
+        const script = document.createElement('script');
+        console.info('Environment:', process.env.NODE_ENV)
+        script.src = (process.env.HOT) ? 'http://localhost:3000/dist/bundle.js' : '../dist/bundle.js';
+        document.write(script.outerHTML);
+      }());
+    </script>
+
+  </body>
+</html>

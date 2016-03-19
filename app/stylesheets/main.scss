@@ -1,0 +1,62 @@
+@import 'variables';
+@import 'loading';
+
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+	overflow: hidden;
+}
+
+.inline{
+	display: inline-block;
+}
+
+.centered{
+	margin: 0 auto;
+	text-align: center;
+}
+
+#app{
+	overflow-y: scroll;
+	height: 100%;
+}
+
+//  --------------------------- Movie list ------------------------------------
+.movie-list li{
+	display: inline-flex;
+	padding: 5px;
+	cursor: pointer;
+	.poster img{
+		width: 100px;
+		height: 150px;
+	}
+}
+
+//  --------------------------- Movie details ------------------------------------
+#movie-details{
+	position: fixed;
+	top: 0;
+	z-index: 100;
+	right: 0;
+	background: rgba(51, 51, 51, 0.93);
+	height: 100%;
+	width: 75%;
+	#movie-header{
+		position: relative;
+		h1.title{
+			text-align: center;
+			text-transform: uppercase;
+			color: #fff;
+			padding-top: 50px;
+		}
+		a.close{
+			position: absolute;
+			right: 25px;
+			top: 0;
+			font-size: 25px;
+			color: #fff;
+		}
+	}
+}
