@@ -1,4 +1,4 @@
-# Tune my Tape
+# Movies index
 
 Based on [Live editing development on desktop app](https://github.com/chentsulin/electron-react-boilerplate/)
 
