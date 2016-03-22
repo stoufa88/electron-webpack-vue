@@ -1,4 +1,4 @@
-# Movies index
+# Boilerplate using soundcloud api
 
 Based on [Live editing development on desktop app](https://github.com/chentsulin/electron-react-boilerplate/)
 
@@ -18,6 +18,8 @@ $ cd your-project-name && npm install
 ```
 
 ## Run
+
+You have to set you 'client_id' from soundcloud developers console to the request uri in services/tracks.js/
 
 Run this two commands __simultaneously__ in different console tabs.
 
