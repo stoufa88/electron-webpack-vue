@@ -1,5 +1,6 @@
 @import 'variables';
-@import 'loading';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~animate.css/animate.min.css';
 
 html, body {
   width: 100%;
@@ -9,54 +10,15 @@ html, body {
 	overflow: hidden;
 }
 
-.inline{
-	display: inline-block;
-}
-
-.centered{
-	margin: 0 auto;
-	text-align: center;
-}
-
 #app{
 	overflow-y: scroll;
 	height: 100%;
 }
 
-//  --------------------------- Movie list ------------------------------------
-.movie-list li{
-	display: inline-flex;
-	padding: 5px;
-	cursor: pointer;
-	.poster img{
-		width: 100px;
-		height: 150px;
-	}
+.card {
+  flex: 100px 0 0 !important;
 }
 
-//  --------------------------- Movie details ------------------------------------
-#movie-details{
-	position: fixed;
-	top: 0;
-	z-index: 100;
-	right: 0;
-	background: rgba(51, 51, 51, 0.93);
-	height: 100%;
-	width: 75%;
-	#movie-header{
-		position: relative;
-		h1.title{
-			text-align: center;
-			text-transform: uppercase;
-			color: #fff;
-			padding-top: 50px;
-		}
-		a.close{
-			position: absolute;
-			right: 25px;
-			top: 0;
-			font-size: 25px;
-			color: #fff;
-		}
-	}
+.card img{
+  margin: -1px;
 }

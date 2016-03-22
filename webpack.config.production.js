@@ -28,6 +28,13 @@ config.module.loaders.push({
 
 config.plugins.push(
   new webpack.optimize.OccurenceOrderPlugin(),
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery"
+  }),
+  new webpack.ProvidePlugin({
+    "window.Tether": "tether"
+  }),
   new webpack.DefinePlugin({
     __DEV__: false,
     'process.env': {

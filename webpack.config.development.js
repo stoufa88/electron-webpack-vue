@@ -42,7 +42,7 @@ config.plugins.push(
     jQuery: "jquery"
   }),
   new webpack.ProvidePlugin({
-    Tether: "tether"
+    "window.Tether": "tether"
   }),
   new webpack.NoErrorsPlugin(),
   new webpack.DefinePlugin({
